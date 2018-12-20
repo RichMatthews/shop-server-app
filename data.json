@@ -1,0 +1,80 @@
+{
+  "products": [
+    {
+      "name": "football",
+      "id": "SPO-001",
+      "category": "sport",
+      "price": 40,
+      "coupons": [
+        "daw124qdw",
+        "a1212cxn"
+      ]
+    },
+    {
+      "name": "cricket bat",
+      "id": "SPO-002",
+      "category": "sport",
+      "price": 80,
+      "coupons": [
+        "daw124qdw",
+        "a1212cxn"
+      ]
+    },
+    {
+      "name": "atlas",
+      "id": "GEO-001",
+      "category": "geography",
+      "price": 10,
+      "coupons": [
+        "daw124qdw",
+        "a1212cxn"
+      ]
+    },
+    {
+      "name": "vase",
+      "id": "ORN-001",
+      "category": "ornaments",
+      "price": "100",
+      "coupons": [
+        "daw124qdw",
+        "a1212cxn"
+      ]
+    },
+    {
+      "name": "duvet",
+      "id": "BED-001",
+      "category": "bedding",
+      "price": 75,
+      "coupons": [
+        "daw124qdw",
+        "a1212cxn"
+      ]
+    },
+    {
+      "name": "television set",
+      "id": "ELE-001",
+      "category": "electronics",
+      "price": 599,
+      "coupons": [
+        "daw124qdw",
+        "a1212cxn"
+      ]
+    }
+  ],
+  "basket": {
+    "products": [
+      {
+        "name": "cricket bat",
+        "id": "SPO-002",
+        "category": "sport",
+        "price": 80,
+        "coupons": [
+          "daw124qdw",
+          "a1212cxn"
+        ],
+        "quantity": 6
+      }
+    ],
+    "id": "12345"
+  }
+}

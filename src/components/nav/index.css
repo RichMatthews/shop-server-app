@@ -1,0 +1,9 @@
+.navigationContainer {
+  background: #d3d1cf;
+  height: 40px;
+  display: flex;
+}
+
+.navItem {
+  margin-right: 50px;
+}
