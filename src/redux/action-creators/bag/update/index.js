@@ -24,3 +24,12 @@ export const updateBasket = (products) => {
     })
   }
 }
+
+export const callBasketApi = () => {
+  return (dispatch) => {
+    axios({
+      method: 'get',
+      url: 'http://localhost:3004/basket'
+    })
+  }
+}

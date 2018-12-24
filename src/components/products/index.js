@@ -15,7 +15,7 @@ class Products extends React.Component {
 
   componentDidMount(){
     const category = this.props.match.params.id
-    axios.get('http://localhost:3004/products').then(({ data }) => {
+    axios.get('http://localhost:3004/products/sport').then(({ data }) => {
       this.setState({ products: data.filter(product => product.category === category )})
     }).then(() => {
       this.props.isLoading()
@@ -30,7 +30,7 @@ class Products extends React.Component {
           {this.state.products.map((product, index) => (
             <div className="productContainer" key={index}>
               <div>{product.name}</div>
-              <div>£{product.price}</div>
+              <div>£{product.basePrice}</div>
               <button onClick={() => this.props.addToBag(product, this.props.bag.products)}>Add To Basket</button>
             </div>
           ))}
