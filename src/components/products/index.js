@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { addToBag } from 'redux/action-creators/bag/add'
-import { isLoading } from 'redux/action-creators/isLoading'
+import { loading } from 'redux/action-creators/loading'
 import './index.css'
 
 class Products extends React.Component {
@@ -18,7 +18,7 @@ class Products extends React.Component {
     axios.get('http://localhost:3004/products/sport').then(({ data }) => {
       this.setState({ products: data.filter(product => product.category === category )})
     }).then(() => {
-      this.props.isLoading()
+      this.props.loading()
     })
   }
 
@@ -44,6 +44,6 @@ const mapStateToProps = ({ bag }) => ({
   bag,
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ addToBag, isLoading }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ addToBag, loading }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products)

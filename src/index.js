@@ -10,8 +10,6 @@ import reducer from 'redux/reducers'
 import modalMiddleware from 'redux/middlewares/modal'
 import * as serviceWorker from './serviceWorker'
 
-import './index.css'
-
 let composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const middlewares = [thunk, modalMiddleware]
