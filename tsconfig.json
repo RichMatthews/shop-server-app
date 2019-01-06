@@ -12,7 +12,12 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "preserve",
-    "isolatedModules": true
+    "isolatedModules": false,
+    "baseUrl": "./src",
+    "paths": {
+      "components/*": ["components/*"],
+      "app-redux/*": ["redux/*"]
+    }
   },
   "include": [
     "src"

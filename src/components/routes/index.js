@@ -13,7 +13,7 @@ import NoMatch from 'components/noMatch'
 import WithLoading from 'components/hocs/withLoading'
 
 import { updateBag } from 'redux/action-creators/bag/update'
-import { loading } from 'redux/action-creators/loading'
+import { loaded } from 'redux/action-creators/loading'
 
 const BASKET_ENDPOINT = 'http://localhost:3004/basket'
 
@@ -37,7 +37,7 @@ class Routes extends React.Component {
     axios.get(BASKET_ENDPOINT).then(({ data }) => {
       this.props.updateBag(data)
     }).then(() => {
-      this.props.loading()
+      this.props.loaded()
     })
   }
 
@@ -68,6 +68,6 @@ const mapStateToProps = ({ bag }) => ({
   bag,
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ updateBag, loading }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ updateBag, loaded }, dispatch)
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Routes))

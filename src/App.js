@@ -6,7 +6,7 @@ const cors = require('cors')
 var bodyParser = require('body-parser')
 const fs = require('fs')
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`SERVER BOOTED SUCCESS! Listening on port ${port}!`))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
